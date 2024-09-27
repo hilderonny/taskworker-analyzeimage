@@ -1,15 +1,12 @@
 # pip install ollama
 import ollama
 
-# llama3
-stream = ollama.chat(
-    model='llama3',
-    messages=[{'role': 'user', 'content': 'Warum ist der Himmel blau?'}],
-    stream=True,
-)
+MODEL = "llama3.1"
+MESSAGE = "Warum ist der Himmel blau?"
+
+# llama3.1
+ollama.pull(MODEL)
+stream = ollama.chat( model=MODEL, messages=[{"role": "user", "content": MESSAGE}], stream=True )
 
 for chunk in stream:
   print(chunk['message']['content'], end='', flush=True)
-
-# llava-llama3
-# https://ollama.com/library/llava:13b
