@@ -1,5 +1,7 @@
 # taskworker-analyzeimage
 
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/hilderonny/taskworker-analyzeimage)
+
 ## Installation
 
 First download and install [Ollama](https://ollama.com/download).
